@@ -1,13 +1,188 @@
+:root {
+  --blanco: #ffffff;
+  --gris1: #edf2f6;
+  --gris2: #2f3848;
+  --gris3: #1a202d;
+  --negro: #000000;
+  --headingFont:'Raleway', sans-serif;
+  --textFont:  'Roboto', sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  background-color: var(--gris1);
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: var(--textFont);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+h1, h2 {
+  font-family: var(--headingFont);
+  font-weight: 900;
+  margin: 0 0 4rem 0;
+  text-align: center;
+  color: var(--gris2);
+}
+h1 span {
+  font-weight: 400;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--gris2);
+}
+
+@media (min-width: 768px) {
+  .contenedor-app {
+      display: flex;
+      min-height: 100vh;
+  }
+
+  aside {
+      background-color: var(--blanco);
+      flex: 0 0 300px;
+  }
+  .seccion-principal {
+      flex: 1;
+  }
+
+}
+/* BARRA LATERAL */
+aside  {
+  padding: 3rem;
+}
+.proyectos {
+  margin-top: 10rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gris2);
+  padding: 4rem;
+}
+.nombre-usuario {
+  color: var(--blanco);
+  font-size: 2.2rem;
+  margin: 0;
+}
+.nombre-usuario span {
+  font-weight: 900;
+}
+.nav-principal a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+.nav-principal a:first-of-type {
+  margin-right: 2rem;
+}
+
+.formulario {
+  background-color: var(--gris3);
+  padding: 4rem;
+}
+.formulario form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contenedor-input {
+  display: flex;
+}
+.contenedor-input label {
+  margin-bottom: 1rem;
+  color: var(--blanco);
+}
+.input-text {
+  padding: 1rem;
+  border: none;
+  border-radius: .5rem;
+  flex: 1;
+  width: 100%;
+}
+
+.contenedor-tareas {
+  padding: 4rem;
+}
+
+.estado {
+  margin-right: 1rem;
+}
+.estado button,
+.mensaje {
+  font-weight: 900;
+  font-family: var(--textFont);
+  font-size: 1rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  border: none;
+}
+.mensaje {
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 0;
+}
+.mensaje:hover {
+  cursor: default;
+}
+
+.enlace-cuenta {
+  margin-top: 2rem;
+  display: block;
+  opacity: .7;
+}
+
+.alerta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  font-family: var(--headingFont);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  text-align: center;
+  width: 100%;
+}
+@media (min-width:768px) {
+  .alerta {
+      width: auto;
+      top: 30px;
+      right: 10px;
+      left: auto;
+  }
+}
+
+.alerta-ok {
+  background-color: rgb(109, 211, 109);
+  color: rgb(2, 103, 2);
+}
+.alerta-error {
+  background-color: rgb(230, 78, 78);
+  color: var(--blanco);
+}
+
+.titulo{
+  font-size: 30px;
+  color: white;
 }
